@@ -44,6 +44,10 @@ To get started with SSHForwarder, follow these steps:
 5. Incoming connections to the remote port specified in the SSH command will now be forwarded to the local port specified in the code.
 
 **Note:** Ensure that SSH server configuration on the remote server allows for remote port forwarding (`GatewayPorts` option set to `yes` in `sshd_config` file).
+
+-R 9000:localhost:8081: Specifies a reverse port forwarding rule. It tells SSH to listen on port 9000 on the remote server and forward any incoming connections to localhost:8081 on the local machine.
+user@127.0.0.1: The username (user) and the IP address (127.0.0.1) of the remote server you want to connect to.
+
 ## Configuration
 
 SSHForwarder can be configured by modifying the `config.toml` file. Customize authentication settings, port numbers, and more according to your requirements.
