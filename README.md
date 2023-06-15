@@ -1,6 +1,6 @@
 # Reverse SSH
 
-Reverse-Shell is a lightweight Rust-based dummy SSH server (like localhost.run[https://localhost.run/] ) for testing and development purposes. It allows you to simulate SSH connections, supports authentication, and enables data forwarding to a remote server. This tool is perfect for smooth SSH development and testing workflows.
+Reverse-Shell is a lightweight Rust-based dummy SSH server (like (localhost.run)[https://localhost.run/] ) for testing and development purposes. It allows you to simulate SSH connections, supports authentication, and enables data forwarding to a remote server. This tool is perfect for smooth SSH development and testing workflows.
 
 ## Features
 
