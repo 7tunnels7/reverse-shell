@@ -29,9 +29,9 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-## Acknowledgments
+## Depn
 
-Thanks to the [ssh2](https://github.com/alexcrichton/ssh2-rs) crate for providing the underlying SSH functionality.
+[ssh2](https://github.com/alexcrichton/ssh2-rs) (0.8)
 
 ## Disclaimer
 
