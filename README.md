@@ -34,7 +34,11 @@ To get started with SSHForwarder, follow these steps:
 
    Example command:
    ```shell
-   ssh -R 9000:localhost:8081 admin@203.0.113.10
+   ssh -R 9000:localhost:8081 127.0.0.1
+   ```
+   With SSH Auth:
+   ```shell
+   ssh -R 9000:localhost:8081 user@127.0.0.1
    ```
 
 5. Incoming connections to the remote port specified in the SSH command will now be forwarded to the local port specified in the code.
