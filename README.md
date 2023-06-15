@@ -41,13 +41,10 @@ To get started with SSHForwarder, follow these steps:
    ssh -R 9000:localhost:8081 user@127.0.0.1
    ```
    
-**Info:**
-```
--R 9000:localhost:8081: Specifies a reverse port forwarding rule. It tells SSH to listen on port 9000 on the remote server and
-forward any incoming connections to localhost:8081 on the local machine.
+**Info:** ```-R 9000:localhost:8081```: Specifies a reverse port forwarding rule. It tells SSH to listen on port 9000 on the remote server and forward any incoming connections to localhost:8081 on the local machine.
 
-user@127.0.0.1: The username (user) and the IP address (127.0.0.1) of the remote server you want to connect to.
-```
+```user@127.0.0.1```: The username (user) and the IP address (127.0.0.1) of the remote server you want to connect to.
+
 
 5. Incoming connections to the remote port specified in the SSH command will now be forwarded to the local port specified in the code.
 
