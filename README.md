@@ -15,8 +15,50 @@ To get started with SSHForwarder, follow these steps:
 1. Clone the repository: `git clone https://github.com/your-username/ssh-forwarder.git`
 2. Build the project: `cargo build`
 3. Run the server: `cargo run`
-4. Connect to the SSH server using your preferred SSH client.
 
+## Reverse SSH Tunnel Example
+
+This code demonstrates how to create a reverse SSH tunnel using Rust and the `ssh2` crate. It listens on a local port and forwards incoming connections to a remote server via SSH.
+
+### Prerequisites
+
+- Rust programming language and Cargo package manager installed.
+- The `ssh2` crate added as a dependency in your `Cargo.toml` file.
+
+### Usage
+
+1. Modify the code to set your desired configuration options:
+   - `remote_host`: The IP address or hostname of the remote server.
+   - `remote_port`: The SSH port on the remote server.
+   - `remote_user`: Your username on the remote server.
+   - `local_host`: The local hostname or IP address on which to listen for incoming connections.
+   - `local_port`: The local port to listen on.
+   - `remote_port_forwarded`: The remote port to forward incoming connections to.
+
+2. Build the project:
+   ```shell
+   cargo build --release
+   ```
+
+3. Start the program:
+   ```shell
+   ./target/release/your_app_name
+   ```
+
+4. Open a new terminal window and establish a reverse SSH tunnel by running the following command:
+   ```shell
+   ssh -R <remote-port>:localhost:<local-port> <remote-user>@<remote-host>
+   ```
+   Replace `<remote-port>` with the port number on the remote server where you want to forward incoming connections. Replace `<local-port>` with the local port specified in the code. Additionally, replace `<remote-user>` with your username on the remote server, and `<remote-host>` with the hostname or IP address of the remote server.
+
+   Example command:
+   ```shell
+   ssh -R 9000:localhost:8081 admin@203.0.113.10
+   ```
+
+5. Incoming connections to the remote port specified in the SSH command will now be forwarded to the local port specified in the code.
+
+**Note:** Ensure that SSH server configuration on the remote server allows for remote port forwarding (`GatewayPorts` option set to `yes` in `sshd_config` file).
 ## Configuration
 
 SSHForwarder can be configured by modifying the `config.toml` file. Customize authentication settings, port numbers, and more according to your requirements.
