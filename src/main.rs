@@ -35,16 +35,16 @@ fn handle_client(mut stream: TcpStream, channel: Arc<Mutex<ssh2::Channel>>) {
 }
 
 fn main() {
-    let remote_host = "127.0.0.1"; // or "localhost"
+    let remote_host = "127.0.0.1";
     let remote_port = 22;
 
-    // SSH auth only
+    //SSH auth only
     // let remote_user = "admin";
     // let remote_password = "admin";
 
     let local_host = "localhost";
-    let local_port = 9000;
-    let remote_port_forwarded = 6969;
+    let local_port = 8081;
+    let remote_port_forwarded = 9000;
 
     let listener = TcpListener::bind((local_host, local_port)).unwrap();
     println!("Listening on {}:{}", local_host, local_port);
