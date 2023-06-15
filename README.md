@@ -16,15 +16,6 @@ To get started with SSHForwarder, follow these steps:
 2. Build the project: `cargo build`
 3. Run the server: `cargo run`
 
-## Reverse SSH Tunnel Example
-
-This code demonstrates how to create a reverse SSH tunnel using Rust and the `ssh2` crate. It listens on a local port and forwards incoming connections to a remote server via SSH.
-
-### Prerequisites
-
-- Rust programming language and Cargo package manager installed.
-- The `ssh2` crate added as a dependency in your `Cargo.toml` file.
-
 ### Usage
 
 1. Modify the code to set your desired configuration options:
@@ -34,17 +25,7 @@ This code demonstrates how to create a reverse SSH tunnel using Rust and the `ss
    - `local_host`: The local hostname or IP address on which to listen for incoming connections.
    - `local_port`: The local port to listen on.
    - `remote_port_forwarded`: The remote port to forward incoming connections to.
-
-2. Build the project:
-   ```shell
-   cargo build --release
-   ```
-
-3. Start the program:
-   ```shell
-   ./target/release/your_app_name
-   ```
-
+   
 4. Open a new terminal window and establish a reverse SSH tunnel by running the following command:
    ```shell
    ssh -R <remote-port>:localhost:<local-port> <remote-user>@<remote-host>
